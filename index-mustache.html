@@ -21,7 +21,20 @@
 		<script src="./assets/js/mustache.js"></script>
 		<script src="./assets/js/jquery.mustache.js"></script>
 						
+		<script type="text/javascript">
 
+
+
+				// Load a single template.
+				$.Mustache.load('./templates/single-template.htm')
+					.done(function () {
+						var output = $('#external-templates-output');
+
+						output.append($.Mustache.render('single-template', { name: "Dave" }));
+					});
+				
+			})(jQuery);
+		</script>
 
 		<!-- Fav and touch icons -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
@@ -33,7 +46,9 @@
 
 	<body>
 		
-		
+				<div id="external-templates-output">
+			<h2>External Template examples</h2>
+		</div>
 		
 	</body>
 </html>
