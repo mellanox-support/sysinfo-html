@@ -1,9 +1,6 @@
-<script id="single-template" type="text/html">
+<script id="template-container" type="text/html">
 <!-- anchor for "back to index" -->
 		<a name="index"></a>
-
-<!-- here starts the content -->
-		<div class="container">
 			<div class="masthead">
 				
 <!-- might be a better way to do this -->
@@ -55,7 +52,7 @@
 						</tr>
 						<tr>
 							<td>Hostname</td>
-							<td>{{name}}</td>
+							<td>zahn1</td>
 						</tr>
 						<tr>
 							<td>Address</td>
@@ -76,7 +73,9 @@
 					</table>
 			</div>
 			
-		
+		{{#repo}}	
+		<a class="btn btn-small btn-success btn-block" href="#sec1002">{{name}} {{other}}</a>
+		{{/repo}}
 			
 		<div class="footer">
 			<p>&copy; Mellanox Technologies 2013</p>
@@ -121,8 +120,7 @@
 			</div>
 		</div>
 		
-    </div> <!-- /container -->
-   
+  
  
 
     <!-- Le javascript
