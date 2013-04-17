@@ -1,0 +1,7 @@
+{ 
+	"channels": "biosdecode",
+	"channels": "blkid",
+	"channels": "dmidecode",
+	"channels": "hwinfo",
+	"channels": "mii-tool",
+}
