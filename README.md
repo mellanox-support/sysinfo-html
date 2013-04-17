@@ -1,5 +1,5 @@
 <a href="http://support.mellanox.com/SupportWeb">
-  <img src="http://mlnx-gso.github.io/sysinfo-snapshot/assets/img/logo.png" width="100px">
+  <img src="http://mlnx-gso.github.io/sysinfo-snapshot/images/logo.png" width="100px">
 </a>
 
 # [Sysinfo-Snapshot] (http://mlnx-gso.github.io/sysinfo-snapshot/)
@@ -8,9 +8,9 @@
 
 ## Quick start
 
-Three quick start options are available:
+Two quick start options are available:
 
-* [Download the latest release](https://github.com/Mlnx-GSO/sysinfo-snapshot/archive/master.zip).
+* [Download the latest release](https://github.com/Mlnx-GSO/sysinfo-html/archive/master.zip).
 * Clone the repo: `git clone git://github.com/Mlnx-GSO/sysinfo-snapshot.git`.
 
 
@@ -35,5 +35,5 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 ## Bug tracker
 
-Have a bug or a feature request? [Please open a new issue](https://github.com/Mlnx-GSO/sysinfo-html/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines](https://github.com/necolas/issue-guidelines), written by [Nicolas Gallagher](https://github.com/necolas/).
+Have a bug or a feature request? [Please open a new issue](https://github.com/Mlnx-GSO/sysinfo-html/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines] in the CONTRIBUTING.md.
 
