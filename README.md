@@ -1,5 +1,5 @@
 <a href="http://support.mellanox.com/SupportWeb">
-  <img src="http://mlnx-gso.github.io/sysinfo-snapshot/images/logo.png" width="100px">
+  <img src="http://mlnx-gso.github.io/sysinfo-snapshot/images/logo.png">
 </a>
 
 # [Sysinfo-Snapshot] (http://mlnx-gso.github.io/sysinfo-snapshot/)
