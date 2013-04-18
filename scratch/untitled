@@ -1,0 +1,41 @@
+
+
+
+
+
+{
+  "hstInfCol1": [
+    { "name": "resque" },
+    { "name": "hub" },
+    { "name": "rip" },
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+<a class="btn btn-small btn-success btn-block" href="#sec1002">chkconfig --list | sort</a>
+
+
+
+
+
+
+
+
+
+blkid
+
+
+
+
+
+
+

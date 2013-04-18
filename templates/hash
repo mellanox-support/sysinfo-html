@@ -1,5 +1,55 @@
 {
-	'name': 'john', 
-	'name': 'John',
-	'name': 'John',
+	'tabs':
+	[
+		{'tab-id': 'hardwareInfo-general'},
+		{'tab-id': 'systemInfo-general'},
+		{'tab-id': 'systemInfo-etc'},
+		{'tab-id': 'systemInfo-proc'},
+		{'tab-id': 'systemInfo-sys'},
+		{'tab-id': 'systemInfoAll-general'},
+		{'tab-id': 'systemInfoAll-etc  --these ids will not be used'},
+		{'tab-id': 'systemInfoAll-proc  --these ids will not be used'},
+		{'tab-id': 'systemInfoAll-sys  --these ids will not be used'},
+		{'tab-id': 'networkInfo'},
+	]
 }
+
+
+{ 'columns':
+	[{'column1':[{
+					'span-size': 'span3',
+					'offset': 'offset1',
+					'commands':[{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+						{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+						{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},]
+				}]
+	},
+		
+	{'column2':[{
+					'span-size': 'span3',
+					'offset': '',
+					'commands':[{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+						{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+						{
+							'name': 'biosdecode',
+							'button-type': 'btn-sucess',
+							'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},]
+				}]
+	},]
+}
+
