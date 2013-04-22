@@ -1,6 +1,6 @@
 # coding: utf-8
 __author__ = 'luis'
-
+import pystache
 import sys
 class MellanoxRenderer(pystache.Renderer):
     def __init__(self, template_directories=None, template_extension=None, hash_directories=None, hash_extension = None ):
@@ -45,3 +45,13 @@ class MellanoxRenderer(pystache.Renderer):
 
 renderer = MellanoxRenderer(template_directories=[sys.argv[2]], hash_directories=[sys.argv[3]])
 print renderer.render(renderer.load_template(sys.argv[1]), renderer._load_hash(sys.argv[1]))
+
+class Wizard:
+    def __init__(self):
+        pass
+
+    def askForTemplateDirs(self):
+        pass
+
+    def askForHashDirs(self):
+        pass
