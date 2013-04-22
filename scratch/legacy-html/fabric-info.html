@@ -32,11 +32,11 @@
 		<!-- here starts the content -->
 		<div class="container">
 			<div class="masthead">
-				
+
 <!-- might be a better way to do this -->
 				<div class="row">
 					<div class="span3">
-						<a href="./index.html"><img src="./images/logo-long.png" alt="Mellanox Technologies"></a>
+						<a href="./index.html"><img src="./assets/img/logo-long.png" alt="Mellanox Technologies"></a>
 					</div>
 					<div class="span3 pull-right text-right">
 						<h3>SysInfoSnapshot</h3>
@@ -56,290 +56,85 @@
 						</div>
 					</div>
 				</div><!-- /.navbar -->
-			</div>
+			</div><!-- /.masthead -->
 
-			<h2>Host information</h2>
+			<h2>Fabric information</h2>
 			
 <!-- stole this from TBS examples - need to determine if it needs to change-->
 			<div class="SISS-content-tabs"> 
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a href="#hardware" data-toggle="tab">Hardware</a></li>
-					<li><a href="#systemInfo" data-toggle="tab">System Info</a></li>
-					<li><a href="#networkInfo" data-toggle="tab">Network</a></li>
-					<li><a href="#etc" data-toggle="tab">/etc</a></li>
-					<li><a href="#proc" data-toggle="tab">/proc</a></li>
-					<li><a href="#sys" data-toggle="tab">/sys</a></li>
-					
-					<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product Specific <b class="caret"></b></a>
-									<ul class="dropdown-menu">
-										<li><a href="./ufm-info.html">UFM</a></li>
-										<li><a href="./vsa-info.html">VSA</a></li>
-										<li><a href="./vma-info.html">VMA</a></li>
-										<li><a href="./fca-info.html">FCA</a></li>
-									</ul>
-								</li>
-					
-					
+					<li class="active"><a href="#general" data-toggle="tab">General</a></li>
+					<li><a href="#sm" data-toggle="tab">Subnet Manager</a></li>
+					<li><a href="#diag" data-toggle="tab">Diagonosics</a></li>
 				</ul>
 
 <!-- here starts the tab content -->
 				<div id="myTabContent" class="tab-content">
 
 <!-- start of hardware tab -->
-					<div class="tab-pane fade in active" id="hardware">
+					<div class="tab-pane fade in active" id="general">
 						<!--these colums must add to 10 but 9 makes a nice layout-->
 						<div class="row" style="height: 350px;">
 							<div class="span3 offset1">							
-								<a class="btn btn-small btn-success btn-block" href="#sec1002">biosdecode</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1003">blkid -c /dev/null | sort</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">dmidecode</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1002">ibaddr</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1002">ibaddr -e -v -d</a>
 							</div>
 
 							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">hwinfo --netcard</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">mii-tool -vv</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
 							</div>
 						</div>
 					</div>
 
 <!-- start of system info tab -->
-					<div class="tab-pane fade" id="systemInfo">
+					<div class="tab-pane fade" id="sm">
 						<!--these colums must add to 10 but 9 makes a nice layout-->
 						<div class="row" style="height: 350px;">
 							<div class="span3 offset1">							
-								<a class="btn btn-small btn-success btn-block" href="#sec1002">chkconfig --list | sort</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1003">date</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1003">uptime</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">df -h</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">dmesg</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">sysctl -a</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">fdisk -l</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">free</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">fw-ini-dump</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">hostname</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">perfquery</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">ps xfalw</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">rpm -qva --qf '%{NAME}-%{VERSION}-%{RELEASE}.%{ARCH} %{SIZE}\n' | sort</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">sg_map -i -x</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">ulimit -a</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1011">uname -a</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1002">sm-status</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1003">sm_master_is</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1003">sminfo</a>
 							</div>
 
 							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">ibstat</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">ibstatus</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">ibv_devinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">ibv_devinfo -v</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lslk</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lsmod</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lsof</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lspci -tv</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lspci -vvvxxx</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">lspci</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">modprobe sg</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">mount</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">ofed_info</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">ompi_info</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">/var/log/messages</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -a</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -e</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -g</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -m</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -s</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -S</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -x</a>
 							</div>
 						</div>
 					</div>
 					
 <!-- start of netork info tab -->					
-					<div class="tab-pane fade" id="networkInfo">
+					<div class="tab-pane fade" id="diag">
 						<!--these colums must add to 10 but 9 makes a nice layout-->
 						<div class="row" style="height: 350px;">
-							<div class="span3 offset1">			
-								<a class="btn btn-small btn-success btn-block" href="#sec1001">arp -an</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1022">ifconfig -a</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1023">ip a s</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1024">ip m s</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1025">ip n s</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1026">iptables -t filter -nvL</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1027">iptables -t mangle -nvL</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1028">iptables -t nat -nvL</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1029">iptables-save -t filter</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1030">iptables-save -t mangle</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1031">iptables-save -t nat</a>
+							<div class="span3 offset1">
+								<a class="btn btn-small btn-success btn-block" href="#sec1017">Multicast_Information</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1001">ib-find-bad-ports</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1022">ib-find-disabled-ports</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1023">ib-mc-info-show</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1024">ib-topology-viewer</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1025">ibdiagnet</a>
 							</div>
 					
 							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1039">netstat -anp</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1040">netstat -i</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1041">netstat -nlp</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1042">netstat -nr</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1048">route -n</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1050">sdpnetstat -anp</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1050">eth-tool-all-interfaces</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1026">ib_switches_FW_scan</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1027">ibcheckerrors -nocolor</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1028">ibhosts</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1029">ibnetdiscover</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1030">ibnetdiscover -p</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1030">ibnetdiscover -gn</a>
+								<a class="btn btn-small btn-success btn-block" href="#sec1031">ibswitches</a>
 							</div>
 						</div>
 					</div>
-
-<!-- start of /etc tab -->				
-					<div class="tab-pane fade" id="etc">
-						<!--these colums must add to 10 but 9 makes a nice layout-->	
-						<div class="row">
-							<div class="span3 offset1">
-								<a class="btn btn-small btn-success btn-block" href="#sec3004">/etc/issue</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1005">/etc/SuSE-release</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1006">/etc/redhat-release</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3001">/etc/hosts</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3003">/etc/hosts.deny</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3002">/etc/hosts.allow</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3002">/etc/udev/rules.d</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3023">/etc/sysconfig/network-scripts/ifcfg-eth3</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3024">/etc/sysconfig/network-scripts/ifcfg-eth4</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3025">/etc/sysconfig/network-scripts/ifcfg-eth4:1</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3026">/etc/sysconfig/network-scripts/ifcfg-ib0</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3027">/etc/sysconfig/network-scripts/ifcfg-lo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3028">/etc/sysconfig/network-scripts/ifcfg-usb0</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3005">/etc/modprobe.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3007">/etc/modprobe.d/blacklist-visor.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3006">/etc/modprobe.d/anaconda.conf</a>
-							</div>
-					
-							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec3008">/etc/modprobe.d/blacklist.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3009">/etc/modprobe.d/dist-alsa.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3010">/etc/modprobe.d/dist-oss.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3011">/etc/modprobe.d/dist.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3012">/etc/modprobe.d/gbe.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3013">/etc/modprobe.d/ib_ipoib.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3014">/etc/modprobe.d/ib_sdp.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3015">/etc/modprobe.d/mlx4_en.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3016">/etc/modprobe.d/openfwwf.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3017">/etc/resolv.conf</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3018">/etc/sysconfig/network-scripts/ifcfg-eth0</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3019">/etc/sysconfig/network-scripts/ifcfg-eth0:1</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3020">/etc/sysconfig/network-scripts/ifcfg-eth0:2</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3021">/etc/sysconfig/network-scripts/ifcfg-eth2</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3022">/etc/sysconfig/network-scripts/ifcfg-eth2:1</a>
-							</div>
-						</div>
-					</div>
-				
-<!-- start of /proc tab -->
-					<div class="tab-pane fade" id="proc">
-						<!--these colums must add to 10 but 9 makes a nice layout-->
-						<div class="row">
-							<div class="span3 offset1">
-								<a class="btn btn-small btn-success btn-block" href="#sec3045">/proc/acpi/processor/CPU*/*</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3045">/proc/misc</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3046">/proc/modules</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3047">/proc/mounts</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3048">/proc/mtrr</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3049">/proc/net/dev_mcast</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3050">/proc/net/sdp</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3029">/proc/buddyinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3051">/proc/partitions</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3030">/proc/cmdline</a>
-								<a class="btn btn-small btn-danger  btn-block" href="#sec3052">/proc/scsi/scsi</a>
-								<a class="btn btn-small btn-warning btn-block" href="#sec3031">/proc/cpuinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3053">/proc/slabinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3032">/proc/crypto</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3054">/proc/stat</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3033">/proc/devices</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3055">/proc/swaps</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3034">/proc/diskstats</a>
-							</div>
-							
-							<div class="span3 offset2">	
-								<a class="btn btn-small btn-success btn-block" href="#sec3056">/proc/uptime</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3035">/proc/dma</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3057">/proc/version</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3036">/proc/execdomains</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3058">/proc/vmstat</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3037">/proc/filesystems</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3059">/proc/zoneinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3038">/proc/interrupts</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3039">/proc/iomem</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3040">/proc/ioports</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3041">/proc/loadavg</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3042">/proc/locks</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3043">/proc/mdstat</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3044">/proc/meminfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">zcat /proc/config.gz</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1057">zz_proc_net_bonding_files</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1057">zz_sys_class_net_files</a>
-							</div>
-						</div>
-					</div>
-					
-<!-- start of /sys tab -->					
-					<div class="tab-pane fade" id="sys">
-						<!--these colums must add to 10 but 9 makes a nice layout-->
-						<div class="row">
-							<div class="span3 offset1">
-								<a class="btn btn-small btn-success btn-block" href="#sec3060">/sys/class/infiniband/cxgb3_0/board_id</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3061">/sys/class/infiniband/cxgb3_0/fw_ver</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3062">/sys/class/infiniband/cxgb3_0/hca_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3063">/sys/class/infiniband/cxgb3_0/hw_rev</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3064">/sys/class/infiniband/cxgb3_0/node_desc</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3065">/sys/class/infiniband/cxgb3_0/node_guid</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3066">/sys/class/infiniband/cxgb3_0/node_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3067">/sys/class/infiniband/cxgb3_0/sys_image_guid</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3068">/sys/class/infiniband/cxgb3_0/uevent</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3069">/sys/class/infiniband/mlx4_0/board_id</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3070">/sys/class/infiniband/mlx4_0/fw_ver</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3071">/sys/class/infiniband/mlx4_0/hca_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3072">/sys/class/infiniband/mlx4_0/hw_rev</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3073">/sys/class/infiniband/mlx4_0/node_desc</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3074">/sys/class/infiniband/mlx4_0/node_guid</a>
-							</div>
-							
-							<div class="span3 offset2">	
-								<a class="btn btn-small btn-success btn-block" href="#sec3075">/sys/class/infiniband/mlx4_0/node_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3076">/sys/class/infiniband/mlx4_0/sys_image_guid</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3077">/sys/class/infiniband/mlx4_0/uevent</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3078">/sys/class/infiniband/mlx4_1/board_id</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3079">/sys/class/infiniband/mlx4_1/fw_ver</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3080">/sys/class/infiniband/mlx4_1/hca_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3081">/sys/class/infiniband/mlx4_1/hw_rev</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3082">/sys/class/infiniband/mlx4_1/node_desc</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3083">/sys/class/infiniband/mlx4_1/node_guid</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3084">/sys/class/infiniband/mlx4_1/node_type</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3085">/sys/class/infiniband/mlx4_1/sys_image_guid</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec3086">/sys/class/infiniband/mlx4_1/uevent</a>
-							</div>
-						</div>						
-					</div>              
-<!--
-              <div class="tab-pane fade" id="tuning">
-                <table class="table">
-					<tr class="success">
-						<td width="25%"><a href="#sec1002">net.ipv4.tcp_timestamps=0</a>
-						</td>
-						<td width="25%"><a href="#sec1002">true</a>
-						</td>						
-					</tr>
-					<tr class="warning">
-						<td width="25%"><a href="#sec1003">net.ipv4.tcp_sack=0</a>
-						</td>
-						<td width="25%"><a href="#sec1002">false</a>
-						</td>						
-					</tr>
-					<tr class="error">
-						<td width="25%"><a href="#sec1011">net.core.netdev_max_backlog=250000</a>
-						</td>
-						<td width="25%"><a href="#sec1002">could not find prameter</a>
-						</td>						
-					</tr>
-					<tr class="info">
-						<td width="25%"><a href="#sec1017">hwinfo --netcard</a>
-						</td>
-						<td width="25%"><a href="#sec1002">biosdecode</a>
-						</td>						
-					</tr>
-					<tr class="success">
-						<td width="25%"><a href="#sec1056">sysctl -a</a>
-						</td>
-						<td width="25%"><a href="#sec1002">biosdecode</a>
-						</td>						
-					</tr>
-				</table>
-              </div>               
--->
             </div>
           </div>
 
@@ -743,12 +538,7 @@ bonding: bond0: An illegal loopback occurred on adapter (mlxen2). Check the conf
 </div>
 
 <a name="sec1011"></a>
-<h2>dmidecode</h2>
-
-<!-- Look -->
-<h1>Do we like scrollable output here? Or is better as flat?</h1>
-
-<pre class="pre-scrollable">
+<h2>dmidecode</h2><pre>
 # dmidecode 2.11
 
 SMBIOS 2.7 present.
@@ -7924,14 +7714,45 @@ Jan 22 18:28:33 hpss20 kernel: ACPI Exception: AE_NOT_EXIST, Evaluating _PMC (20
 
 		<div class="footer">
 			<p>&copy; Mellanox Technologies 2013</p>
-			
+
 			<ul class="footer-links">
-				<li><a href="#">About</a></li>
+				<li><a href="#myModal" data-toggle="modal">About</a></li>
 				<li class="muted">&middot;</li>
 				<li><a href="#">Contact</a></li>
 				<li class="muted">&middot;</li>
 				<li><a href="http://support.mellanox.com/SupportWeb">Support Web</a></li>
 			</ul>
+
+			<div class="bs-docs-social">
+				<div class="container">
+					<ul class="bs-docs-social-buttons">
+						<li>
+							<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mellanoxsupport&repo=sysinfo-snapshot&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+						</li>
+						<li>
+							<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mellanoxsupport&repo=sysinfo-snapshot&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<h3 id="myModalLabel">About SysInfoSnapshot</h3>
+			</div>
+			<div class="modal-body">
+				<p>Version: 2.01.1</p>
+				<p>Credits:</p>
+				<p>Python Coding: Luis De Siqueira</p>
+				<p>HTML Interface: Ryan Heath</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
 		</div>
     </div> <!-- /container -->
    

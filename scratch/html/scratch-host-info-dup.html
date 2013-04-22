@@ -16,7 +16,71 @@
 		<!--[if lt IE 9]>
 		<script src="./assets/js/html5shiv.js"></script>
 		<![endif]-->
+
+		<script src="./assets/js/jquery-1.9.1.js"></script>
+		<script src="./assets/js/mustache.js"></script>
+
+	
+						
+		<script type="text/javascript">
+//This method is called initially to load in all required templates
+//so they do not need to be loaded individually.
+//@callbackFunction - A callback that is fired after filling in the templates.
+
+var Files = {};
+function LoadTemplates (callbackFunction) {
+	//Get the template file that contains all of the templates.
+	$.get('templates/temp.mustache', function (data) {
+		//Loop through all of the script tags in the returned data,
+		//and add a new key and value to the files object using the
+		//ID of the script as the key and the HTML as the value.
 		
+		alert('marker');
+		$(data).filter('script').each(function (e) {
+			Files[$(this).attr('id')] = $(this).html();
+			alert(Files[hello]);
+			alert('hello');
+		})
+		callbackFunction();
+	});
+}
+
+//Use this method to get the HTML for the specified template.
+//@tmpl - The ID of the template that you require.
+function GetTemplate(tmpl) {
+	//Get the Files key value that corresponds to the requested template.
+	return Files[tmpl];
+};
+
+//Load all of the templates when the document is ready.
+$(document).ready(function () {
+	LoadTemplates(function () {
+		
+		//Perform any other required code in the callback. In this
+		//case, we will want to fill our new templates using another
+		//function.
+		FillTemplates();
+	});
+});
+
+//Fill in the templates that we have loaded, and insert them into the 
+//page.
+function FillTemplates() {
+	//Get the required templates from the ones we loaded.
+	var tabs = GetTemplate('myTabContent');
+	//Define our data in a view object.
+	var view = { commands: [ { name: "Christophe", output: "Coenraets" }, { name: "John", output: "Smith" },]};
+	//Then, we can render the final contact card and insert it
+	//into our page.
+	var rendered = Mustache.render(tabs, view);
+	$('#myTabContent').html(rendered);
+	
+};
+		</script>
+
+
+
+	
 		<!-- Fav and touch icons -->
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./assets/ico/apple-touch-icon-144-precomposed.png">
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./assets/ico/apple-touch-icon-114-precomposed.png">
@@ -26,17 +90,19 @@
 	</head>
 
 	<body>
+
+		
 		<!-- anchor for "[back to index]" -->
 		<a name="index"></a>
 		
 		<!-- here starts the content -->
 		<div class="container">
 			<div class="masthead">
-
+				
 <!-- might be a better way to do this -->
 				<div class="row">
 					<div class="span3">
-						<a href="./index.html"><img src="./images/logo-long.png" alt="Mellanox Technologies"></a>
+						<a href="./index.html"><img src="./assets/img/logo-long.png" alt="Mellanox Technologies"></a>
 					</div>
 					<div class="span3 pull-right text-right">
 						<h3>SysInfoSnapshot</h3>
@@ -53,90 +119,48 @@
 								<li><a href="./switch-info.html">Switch Info</a></li>
 								<li><a href="./tuning-review.html">Tuning Review</a></li>
 							</ul>
+							<ul class="nav pull-right">
+								<li><a href="./errors.html">Error Summary</a></li>							
+							</ul>
 						</div>
 					</div>
 				</div><!-- /.navbar -->
 			</div><!-- /.masthead -->
 
-			<h2>Fabric information</h2>
-			
-<!-- stole this from TBS examples - need to determine if it needs to change-->
+			<h2>Host information</h2>
+			    
+<!-- SISS-content-tabs not actually implemented -->
 			<div class="SISS-content-tabs"> 
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a href="#general" data-toggle="tab">General</a></li>
-					<li><a href="#sm" data-toggle="tab">Subnet Manager</a></li>
-					<li><a href="#diag" data-toggle="tab">Diagonosics</a></li>
+					<li class="active"><a href="#hardware" data-toggle="tab">Hardware</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="./host-info.html">System Info <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#systemInfo" data-toggle="tab">General</a></li>
+							<li><a href="#etc" data-toggle="tab">/etc</a></li>
+							<li><a href="#proc" data-toggle="tab">/proc</a></li>
+							<li><a href="#sys" data-toggle="tab">/sys</a></li>
+							<li class="divider"></li>
+							<li><a href="#systemInfoAll" data-toggle="tab">All Details</a></li>
+						</ul>
+					</li>
+					<li><a href="#networkInfo" data-toggle="tab">Network</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product Specific <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="./ufm-info.html">UFM</a></li>
+							<li><a href="./vsa-info.html">VSA</a></li>
+							<li><a href="./vma-info.html">VMA</a></li>
+							<li><a href="./fca-info.html">FCA</a></li>
+						</ul>
+					</li>
 				</ul>
 
 <!-- here starts the tab content -->
 				<div id="myTabContent" class="tab-content">
 
-<!-- start of hardware tab -->
-					<div class="tab-pane fade in active" id="general">
-						<!--these colums must add to 10 but 9 makes a nice layout-->
-						<div class="row" style="height: 350px;">
-							<div class="span3 offset1">							
-								<a class="btn btn-small btn-success btn-block" href="#sec1002">ibaddr</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1002">ibaddr -e -v -d</a>
-							</div>
-
-							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">iblinkinfo</a>
-							</div>
-						</div>
-					</div>
-
-<!-- start of system info tab -->
-					<div class="tab-pane fade" id="sm">
-						<!--these colums must add to 10 but 9 makes a nice layout-->
-						<div class="row" style="height: 350px;">
-							<div class="span3 offset1">							
-								<a class="btn btn-small btn-success btn-block" href="#sec1002">sm-status</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1003">sm_master_is</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1003">sminfo</a>
-							</div>
-
-							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -a</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -e</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -g</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -m</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -s</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -S</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1056">saquery -x</a>
-							</div>
-						</div>
-					</div>
-					
-<!-- start of netork info tab -->					
-					<div class="tab-pane fade" id="diag">
-						<!--these colums must add to 10 but 9 makes a nice layout-->
-						<div class="row" style="height: 350px;">
-							<div class="span3 offset1">
-								<a class="btn btn-small btn-success btn-block" href="#sec1017">Multicast_Information</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1001">ib-find-bad-ports</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1022">ib-find-disabled-ports</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1023">ib-mc-info-show</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1024">ib-topology-viewer</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1025">ibdiagnet</a>
-							</div>
-					
-							<div class="span3 offset2">
-								<a class="btn btn-small btn-success btn-block" href="#sec1026">ib_switches_FW_scan</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1027">ibcheckerrors -nocolor</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1028">ibhosts</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1029">ibnetdiscover</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1030">ibnetdiscover -p</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1030">ibnetdiscover -gn</a>
-								<a class="btn btn-small btn-success btn-block" href="#sec1031">ibswitches</a>
-							</div>
-						</div>
-					</div>
-            </div>
-          </div>
+				</div><!--/tab-content-->
+			</div>
 
 <!-- sysinfo details start here -->
 
@@ -314,9 +338,13 @@ CONFIG_AVERAGE=y
 </div>
 
 <a name="suse-release"></a>
-<h2>cat /etc/SuSE-release</h2>
-<pre>cat: /etc/SuSE-release: No such file or directory
-</pre>
+<h2>SuSE-release</h2>
+<div class="alert alert-error">
+	<h4>Error!</h4>
+	<p>cat: /etc/SuSE-release: No such file or directory </p>
+</div>
+
+
 <div class="row">
 	<div class="span2 pull-right">
 		<a class="btn btn-mini btn-inverse" href="#index">back to index</a>
@@ -538,7 +566,12 @@ bonding: bond0: An illegal loopback occurred on adapter (mlxen2). Check the conf
 </div>
 
 <a name="sec1011"></a>
-<h2>dmidecode</h2><pre>
+<h2>dmidecode</h2>
+
+<!-- Look -->
+<h1>Do we like scrollable output here? Or is better as flat?</h1>
+
+<pre class="pre-scrollable">
 # dmidecode 2.11
 
 SMBIOS 2.7 present.
@@ -1907,7 +1940,7 @@ Cannot get driver information: Operation not supported
 
 Interface: mlxen0
 driver: mlx4_en
-version: 2.0 (Dec 2011)
+<a href="#" class="" data-toggle="data-container tooltip" title="Has MOFED 2.0 been released? This is not the current shipping version as of 3.27.13.">version: 2.0 (Dec 2011)</a>
 firmware-version: 2.11.500
 bus-info: 0000:04:00.0
 --------------------------------------------------

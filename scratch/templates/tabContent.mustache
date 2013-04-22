@@ -1,0 +1,242 @@
+<script id="myTabContent" type="text/html">
+
+<!-- start of hardware tab -->
+					<div class="tab-pane fade in active" id="hardware">
+						<div class="row-fluid" style="min-height: 350px;">
+							<div class="span3 offset1">	
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>
+					</div>
+
+<!-- start of system info tab -->
+					<div class="tab-pane fade" id="systemInfo">
+						<div class="row-fluid">
+							<h3>General</h3>
+							<div class="span3 offset1">							
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>
+					</div>
+
+<!-- start of /etc sub-tab item -->				
+					<div class="tab-pane fade" id="etc">
+						<div class="row-fluid">
+							<h3>/etc/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}							</div>
+						</div>
+					</div>
+				
+<!-- start of /proc sub-tab item  -->
+					<div class="tab-pane fade" id="proc">
+						<div class="row-fluid">
+							<h3>/proc/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}							</div>
+						</div>
+					</div>
+					
+<!-- start of /sys sub-tab item -->					
+					<div class="tab-pane fade" id="sys">
+						<div class="row-fluid">
+							<h3>/sys/class/infiniband/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>						
+					</div>
+					
+<!-- all -->
+<!-- start of system all-info sub-tab item -->
+					<div class="tab-pane fade" id="systemInfoAll">
+						<div class="row-fluid">
+							<h3>General</h3>
+							<div class="span3 offset1">							
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}							</div>
+						</div>
+
+<!-- start of system all-info /etc sub-tab item -->				
+						<div class="row-fluid">
+							<h3>/etc/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>
+			
+<!-- start of system all-info /proc sub-tab item -->
+						<div class="row-fluid">
+							<h3>/proc/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>
+					
+<!-- start of system all-info /sys sub-tab item -->					
+						<div class="row-fluid">
+							<h3>/sys/class/infiniband/</h3>
+							<div class="span3 offset1">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>						
+					</div>
+<!-- /all -->
+										
+<!-- start of netork info tab -->
+					<div class="tab-pane fade" id="networkInfo">
+						<div class="row-fluid" style="height: 350px;">
+							<div class="span3 offset1">			
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>
+								{{/commands}}
+							</div>
+
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+							
+							<div class="span3">
+								{{#commands}}
+									<a class="btn btn-small btn-success btn-block" href="#{{name}}">{{name}}</a>								
+								{{/commands}}
+							</div>
+						</div>
+					</div>
+					
+<pre>
+
+{{#commands}}
+{{{output}}}
+{{/commands}}
+
+</pre>					
+					
+</script>
