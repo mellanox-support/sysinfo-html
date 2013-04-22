@@ -27,6 +27,7 @@ class MellanoxRenderer(pystache.Renderer):
         if self.hash_extension is None:
             self.hash_extension = "hash"
 
+
     def _load_hash(self, name):
         """
 
