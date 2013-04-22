@@ -2,7 +2,6 @@
 __author__ = 'luis'
 
 import sys
-
 class MellanoxRenderer(pystache.Renderer):
     def __init__(self, template_directories=None, template_extension=None, hash_directories=None, hash_extension = None ):
         """
