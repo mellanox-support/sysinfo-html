@@ -1,0 +1,14 @@
+{
+	'tabs':
+	[
+		{'tab-id': 'hardwareInfo-general',},
+		{'tab-id': 'systemInfo-general',}, 
+
+	],
+	
+	'columns': [ {
+		'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ] }, {
+		'column-id': '2', 'span-size': 'span3', 'offset-position': '       ', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ] }, {
+		'column-id': '1', 'span-size': 'span3', 'offset-position': '       ', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ]}, ],
+}
+
