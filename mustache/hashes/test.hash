@@ -3,7 +3,14 @@
 	[
 		{'tab-id': 'hardwareInfo-general',},
 		{'tab-id': 'systemInfo-general',}, 
-
+		{'tab-id': 'systemInfo-etc'},
+		{'tab-id': 'systemInfo-proc'},
+		{'tab-id': 'systemInfo-sys'},
+		{'tab-id': 'systemInfoAll-general'},
+		{'tab-id': 'systemInfoAll-etc  --these ids will not be used'},
+		{'tab-id': 'systemInfoAll-proc  --these ids will not be used'},
+		{'tab-id': 'systemInfoAll-sys  --these ids will not be used'},
+		{'tab-id': 'networkInfo'},
 	],
 	
 	'columns': 
@@ -15,9 +22,9 @@
 		
 	'commands': 
 	[ 
-		{'button-type': 'btn-sucess', 'name': 'el1', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',}, 
-		{'button-type': 'btn-sucess', 'name': 'el2', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
-		{'button-type': 'btn-sucess', 'name': 'el3', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+		{'button-type': 'btn-sucess', 'name': 'lspci', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',}, 
+		{'button-type': 'btn-sucess', 'name': 'partition info', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+		{'button-type': 'btn-sucess', 'name': 'Washing Machine', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
 	],
 	
 }
