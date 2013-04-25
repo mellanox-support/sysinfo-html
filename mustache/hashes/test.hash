@@ -6,9 +6,19 @@
 
 	],
 	
-	'columns': [ {
-		'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ] }, {
-		'column-id': '2', 'span-size': 'span3', 'offset-position': '       ', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ] }, {
-		'column-id': '1', 'span-size': 'span3', 'offset-position': '       ', 'commands': [ { 'button-type': 'btn-sucess', 'name': 'lsssss', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx', } ]}, ],
+	'columns': 
+	[ 
+		{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1',}, 
+		{'column-id': '2', 'span-size': 'span3', 'offset-position': '',}, 
+		{'column-id': '3', 'span-size': 'span3', 'offset-position': '',},
+	],
+		
+	'commands': 
+	[ 
+		{'button-type': 'btn-sucess', 'name': 'el1', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',}, 
+		{'button-type': 'btn-sucess', 'name': 'el2', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+		{'button-type': 'btn-sucess', 'name': 'el3', 'output': 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx',},
+	],
+	
 }
 
