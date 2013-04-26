@@ -1,11 +1,9 @@
 {
 	'tabs':
 	[
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'hardwareInfo-general'
-		,'active-tab': 'active'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		,
+		{'tab-id': 'hardwareInfo-general'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in active">',  
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -49,10 +47,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfo-general'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		,
+		{'tab-id': 'systemInfo-general'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -96,10 +93,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfo-etc'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		, 
+		{'tab-id': 'systemInfo-etc'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -143,10 +139,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfo-proc'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		,
+		{'tab-id': 'systemInfo-proc'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -190,10 +185,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfo-sys'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		,
+		{'tab-id': 'systemInfo-sys'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -237,10 +231,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfoAll-general'
-		,'sectionParentClose': []
-		, 
+		{'tab-id': 'systemInfoAll-general'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -284,10 +277,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': []
-		,'tab-id': 'systemInfoAll-etc', 'note': 'this id will not be used'
-		,'sectionParentClose': []
-		,
+		{'tab-id': 'systemInfoAll-etc', 'note': 'this id will not be used'
+		,'div-head': '<!--'
+		,'div-tail': '-->', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -331,10 +323,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': []
-		,'tab-id': 'systemInfoAll-proc', 'note': 'this id will not be used'
-		,'sectionParentClose': []
-		,
+		{'tab-id': 'systemInfoAll-proc', 'note': 'this id will not be used'
+		,'div-head': '<!--'
+		,'div-tail': '-->',
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -378,10 +369,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': []
-		,'tab-id': 'systemInfoAll-sys', 'note': 'this id will not be used'
-		,'sectionParentClose': [{'boolean': 'true',},]
-		,
+		{'tab-id': 'systemInfoAll-sys', 'note': 'this id will not be used'
+		,'div-head': '<!--'
+		,'div-tail': '-->',
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
@@ -425,9 +415,9 @@
 				}, 
 			]
 		},
-		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'networkInfo'
-		,
+		{'tab-id': 'networkInfo'
+		,'div-head': '<div id='
+		,'div-tail': ' class="tab-pane fade in">', 
 			'columns':
 			 [ 
 				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
