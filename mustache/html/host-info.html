@@ -61,26 +61,23 @@
 					</div>
 				</div><!-- /.navbar -->
 			</div><!-- /.masthead -->
-
-			
-			 			<ul class="breadcrumb">
-				<li><a href="#">Home</a> <span class="divider">/</span></li>
-				<li><a href="#">Library</a> <span class="divider">/</span></li>
-				<li class="active">Data</li>
-			</ul>    
+   
 <!-- SISS-content-tabs not actually implemented -->
 			<div class="SISS-content-tabs"> 
+			
+			
+			<div class="SISS-content-tabs"> 
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a href="#hardwareInfo-general" data-toggle="tab">Hardware</a></li>
+					<li class="active"><a href="#hardware" data-toggle="tab">Hardware</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="./host-info.html">System Info <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#systemInfo-general" data-toggle="tab">General</a></li>
-							<li><a href="#systemInfo-etc" data-toggle="tab">/etc</a></li>
-							<li><a href="#systemInfo-proc" data-toggle="tab">/proc</a></li>
-							<li><a href="#systemInfo-sys" data-toggle="tab">/sys</a></li>
+							<li><a href="#systemInfo" data-toggle="tab">General</a></li>
+							<li><a href="#etc" data-toggle="tab">/etc</a></li>
+							<li><a href="#proc" data-toggle="tab">/proc</a></li>
+							<li><a href="#sys" data-toggle="tab">/sys</a></li>
 							<li class="divider"></li>
-							<li><a href="#systemInfoAll-general" data-toggle="tab">All Details</a></li>
+							<li><a href="#systemInfoAll" data-toggle="tab">All Details</a></li>
 						</ul>
 					</li>
 					<li><a href="#networkInfo" data-toggle="tab">Network</a></li>
@@ -96,9 +93,8 @@
 				</ul>
 
 <!-- here starts the tab content -->
-				<div id="myTabContent" class="tab-content">
+				<div id="tabContent" class="tab-content">
 					<div id="hardwareInfo-general" class="tab-pane fade in active">
-						<h2>Host information</h2>
 						<div class="row-fluid" style="height: 350px;">
 							<div class="span3 offset1">	
 								<a class="btn btn-small btn-success btn-block" href="#command1a">command1a</a>

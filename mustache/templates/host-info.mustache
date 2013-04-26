@@ -61,25 +61,41 @@
 					</div>
 				</div><!-- /.navbar -->
 			</div><!-- /.masthead -->
-
-			<ul class="breadcrumb">
-				<li><a href="#">Home</a> <span class="divider">/</span></li>
-				<li><a href="#">Library</a> <span class="divider">/</span></li>
-				<li class="active">Data</li>
-			</ul>    
+   
 <!-- SISS-content-tabs not actually implemented -->
 			<div class="SISS-content-tabs"> 
+			
+			{{#navTabs}}
+				<ul id="{{navTab-id}}" class="{{#navTab-classParams}}{{/navTab-classParams}}">
+					{{#navTab-listItems}}
+						{{#isnotdrop}}
+						<li class="{{is-active}}"><a href="#{{tabSection-id}}" data-toggle="tab">{{tabSection-title}}</a></li>
+						{{/isnotdrop}}
+						{{#isdrop}}
+						<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">{{dropdownTitle}} <b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								{{#listItems}}
+								<li {{listItemClass}}>{{#trueFalse}}<a href="#{{tabSection-id}}" {{data-toggle}}>{{tabSection-title}}</a>{{/trueFalse}}</li>
+								{{/listItems}}
+							</ul>
+						</li>
+						{{/isdrop}}
+					{{/navTab-listItems}}
+				</ul>
+			{{/navTabs}}
+			
+			<div class="SISS-content-tabs"> 
 				<ul id="myTab" class="nav nav-tabs">
-					<li class="active"><a href="#hardwareInfo-general" data-toggle="tab">Hardware</a></li>
+					<li class="active"><a href="#hardware" data-toggle="tab">Hardware</a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="./host-info.html">System Info <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#systemInfo-general" data-toggle="tab">General</a></li>
-							<li><a href="#systemInfo-etc" data-toggle="tab">/etc</a></li>
-							<li><a href="#systemInfo-proc" data-toggle="tab">/proc</a></li>
-							<li><a href="#systemInfo-sys" data-toggle="tab">/sys</a></li>
+							<li><a href="#systemInfo" data-toggle="tab">General</a></li>
+							<li><a href="#etc" data-toggle="tab">/etc</a></li>
+							<li><a href="#proc" data-toggle="tab">/proc</a></li>
+							<li><a href="#sys" data-toggle="tab">/sys</a></li>
 							<li class="divider"></li>
-							<li><a href="#systemInfoAll-general" data-toggle="tab">All Details</a></li>
+							<li><a href="#systemInfoAll" data-toggle="tab">All Details</a></li>
 						</ul>
 					</li>
 					<li><a href="#networkInfo" data-toggle="tab">Network</a></li>
@@ -96,7 +112,7 @@
 
 <!-- here starts the tab content -->
 				<div id="myTabContent" class="tab-content">
-					{{#tabs}}
+					{{#tabContent}}
 					{{#sectionParent}}
 					<div id="{{tab-id}}" class="tab-pane fade in {{active-tab}}">
 					{{/sectionParent}}
@@ -112,7 +128,7 @@
 					{{#sectionParentClose}}
 					</div>
 					{{/sectionParentClose}}
-					{{/tabs}}
+					{{/tabContent}}
 				</div><!--/tab-content-->
 			</div>
 

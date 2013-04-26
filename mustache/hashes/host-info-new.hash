@@ -1,4 +1,16 @@
 {
+	'tabs':
+	[
+		{'tabSection-id': 'hardwareInfo-general', tabSection-title': 'Hardware',},
+		{'tabSection-id': 'systemInfo-general',   tabSection-title': 'General',},
+		{'tabSection-id': 'systemInfo-etc',       tabSection-title': '/etc',},
+		{'tabSection-id': 'systemInfo-proc',      tabSection-title': '/proc',},
+		{'tabSection-id': 'systemInfo-sys',       tabSection-title': '/sys',},
+	
+	],
+
+
+
 	'tabContent':
 	[
 		{'sectionParent': [{'boolean': 'true',},]
