@@ -26,9 +26,7 @@
 	</head>
 
 	<body>
-	
-{{> hello}}	
-	
+		
 <!-- anchor for "back to index" -->
 		<a name="index"></a>
 		
@@ -64,46 +62,52 @@
 				</div><!-- /.navbar -->
 			</div><!-- /.masthead -->
    
-<!-- SISS-content-tabs not actually a class -->
+<!-- SISS-content-tabs not actually implemented -->
 			<div class="SISS-content-tabs"> 
-			{{#navTabs}}
-				<ul id="{{navTab-id}}" class="{{#navTabClassParams}}{{.}} {{/navTabClassParams}}">
-				{{#navTab-listItems}}
-				{{#isnotdrop}}
-					<li class="{{listItemClass}}"><a href="#{{tabSection-id}}" data-toggle="tab">{{tabSection-title}}</a></li>
-				{{/isnotdrop}}
-				{{#isdrop}}
-					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">{{dropdownTitle}} <b class="caret"></b></a>
+				<ul id="myTab" class="nav nav-tabs">
+					<li class="active"><a href="#hardware" data-toggle="tab">Hardware</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="./host-info.html">System Info <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-						{{#listItems}}
-							<li class="{{listItemClass}}"><a href="#{{tabSection-id}}" {{{data-toggle}}}>{{tabSection-title}}</a></li>
-							{{/listItems}}
-							</ul>
-						</li>
-					{{/isdrop}}
-				{{/navTab-listItems}}
+							<li><a href="#systemInfo" data-toggle="tab">General</a></li>
+							<li><a href="#etc" data-toggle="tab">/etc</a></li>
+							<li><a href="#proc" data-toggle="tab">/proc</a></li>
+							<li><a href="#sys" data-toggle="tab">/sys</a></li>
+							<li class="divider"></li>
+							<li><a href="#systemInfoAll" data-toggle="tab">All Details</a></li>
+						</ul>
+					</li>
+					<li><a href="#networkInfo" data-toggle="tab">Network</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Product Specific <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="./ufm-info.html">UFM</a></li>
+							<li><a href="./vsa-info.html">VSA</a></li>
+							<li><a href="./vma-info.html">VMA</a></li>
+							<li><a href="./fca-info.html">FCA</a></li>
+						</ul>
+					</li>
 				</ul>
-			{{/navTabs}}
 
 <!-- here starts the tab content -->
 				<div id="myTabContent" class="tab-content">
-				{{#tabContent}}
-					{{#sectionPareent}}
+					{{#tabContent}}
+					{{#sectionParent}}
 					<div id="{{tab-id}}" class="tab-pane fade in {{active-tab}}">
 					{{/sectionParent}}
 						<div class="row-fluid" style="height: 350px;">
-						{{#columns}}
+							{{#columns}}
 							<div class="{{span-size}} {{offset-position}}">	
-							{{#commands}}
+								{{#commands}}
 								<a class="btn btn-small {{button-state}} btn-block" href="#{{name}}">{{name}}</a>
-							{{/commands}}
+								{{/commands}}
 							</div>
-						{{/columns}}
+							{{/columns}}
 						</div>
 					{{#sectionParentClose}}
 					</div>
 					{{/sectionParentClose}}
-				{{/tabContent}}
+					{{/tabContent}}
 				</div><!--/tab-content-->
 			</div>
 
@@ -111,22 +115,22 @@
 
 <hr>
 
-{{#tabContent}}
-{{#columns}}
-{{#commands}}
-<a name="{{name}}"></a>
-<h2>{{name}}</h2>
+<a name="arp-an"></a>
+<h2>arp -an</h2>
 <pre>
-{{output}}
+? (141.142.176.29) at 00:02:c9:f7:c1:b0 [ether] on bond0
+? (10.141.255.253) at d4:ae:52:65:58:76 [ether] on eth0
+? (10.141.255.254) at d4:ae:52:65:71:82 [ether] on eth0
+? (141.142.176.1) at 00:04:96:6d:52:47 [ether] on bond0
+? (10.141.255.252) at d4:ae:52:65:71:82 [ether] on eth0
 </pre>
 <div class="row">
 	<div class="span2 pull-right">
 		<a class="btn btn-mini btn-inverse" href="#index">back to index</a>
 	</div>
 </div>
-{{/commands}}
-{{/columns}}
-{{/tabContent}}
+
+
 
 
 		<div class="footer">
