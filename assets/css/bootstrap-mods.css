@@ -7,10 +7,12 @@ body {
 	padding-bottom: 60px;
 }
 
+/*
 .container {
 	margin: 0 auto;
 	max-width: 1000px;
 }
+*/
 .container > hr {
 	margin: 30px 0; 
 }

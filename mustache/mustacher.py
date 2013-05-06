@@ -41,7 +41,7 @@ class MellanoxRenderer(pystache.Renderer):
         """
         os.chdir(self.hash_directories)
         fname = '{0}/{1}.{2}'.format(self.hash_directories, name, self.hash_extension)
-        print fname
+        #print fname
         return ast.literal_eval(open(fname, 'r').read())
 
     def _find_name_in_directory(self, name, directory):
@@ -186,7 +186,7 @@ class Wizard:
             fname = '{0}.html'.format(t_name)
             os.chdir(self.settings['outputs'])
             open(fname, 'w').write(completed)
-            print '{0} compiled'.format(fname)
+            print 'compiled: {0}'.format(fname)
 
 
 class CLI:

@@ -1,3 +1,6 @@
+
+{{! { { { { { <html> A mustache template } } } } } }}
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -26,8 +29,6 @@
 	</head>
 
 	<body>
-	
-{{> hello}}	
 	
 <!-- anchor for "back to index" -->
 		<a name="index"></a>
@@ -88,11 +89,12 @@
 <!-- here starts the tab content -->
 				<div id="myTabContent" class="tab-content">
 				{{#tabContent}}
-					{{#sectionPareent}}
+					{{#sectionParent}}
 					<div id="{{tab-id}}" class="tab-pane fade in {{active-tab}}">
 					{{/sectionParent}}
-						<div class="row-fluid" style="height: 350px;">
+						<div class="row" style="height: 350px;">
 						{{#columns}}
+							<!-- as some need to balance/center these colunms - there 1 empty on the left 2 on the right -->
 							<div class="{{span-size}} {{offset-position}}">	
 							{{#commands}}
 								<a class="btn btn-small {{button-state}} btn-block" href="#{{name}}">{{name}}</a>
