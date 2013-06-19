@@ -1,0 +1,188 @@
+
+{{! { { { { { <html> A mustache template } } } } } }}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Mellanox SysInfoSnapshot &middot; Host Information</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+
+		<!-- styles -->
+		<link href="../../assets/css/bootstrap.css" rel="stylesheet">
+		<link href="../../assets/css/bootstrap-mods.css" rel="stylesheet">
+		<link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="../../assets/js/html5shiv.js"></script>
+		<![endif]-->
+
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../../assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../../assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../../assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="../../assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="../../assets/ico/favicon.png">
+	</head>
+
+	<body>
+	
+<!-- anchor for "back to index" -->
+		<a name="index"></a>
+		
+		<!-- here starts the content -->
+		<div class="container">
+			<div class="masthead">
+				
+<!-- might be a better way to do this -->
+				<div class="row">
+					<div class="span3">
+						<a href="./index.html"><img src="../../assets/img/logo-long.png" alt="Mellanox Technologies"></a>
+					</div>
+					<div class="span3 pull-right text-right">
+						<h3>SysInfoSnapshot</h3>
+					</div>
+				</div>
+				
+<!-- begin navigation bar -->				
+				<div class="navbar navbar-inverse">
+					<div class="navbar-inner">
+						<div class="container">
+							<ul class="nav">
+								<li><a href="./host-info.html">Host Info</a></li>
+								<li><a href="./fabric-info.html">Fabric Info</a></li>
+								<li><a href="./switch-info.html">Switch Info</a></li>
+								<li><a href="./tuning-review.html">Tuning Review</a></li>
+							</ul>
+							<ul class="nav pull-right">
+								<li><a href="./errors.html">Error Summary</a></li>							
+							</ul>
+						</div>
+					</div>
+				</div><!-- /.navbar -->
+			</div><!-- /.masthead -->
+   
+<!-- SISS-content-tabs not actually a class -->
+			<div class="SISS-content-tabs"> 
+			{{#navTabs}}
+				<ul id="{{navTab-id}}" class="{{#navTabClassParams}}{{.}} {{/navTabClassParams}}">
+				{{#navTab-listItems}}
+				{{#isnotdrop}}
+					<li class="{{listItemClass}}"><a href="#{{tabSection-id}}" data-toggle="tab">{{tabSection-title}}</a></li>
+				{{/isnotdrop}}
+				{{#isdrop}}
+					<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="#">{{dropdownTitle}} <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+						{{#listItems}}
+							<li class="{{listItemClass}}"><a href="#{{tabSection-id}}" {{{data-toggle}}}>{{tabSection-title}}</a></li>
+							{{/listItems}}
+							</ul>
+						</li>
+					{{/isdrop}}
+				{{/navTab-listItems}}
+				</ul>
+			{{/navTabs}}
+
+<!-- here starts the tab content -->
+				<div id="myTabContent" class="tab-content">
+				{{#tabContent}}
+					{{#sectionParent}}
+					<div id="{{tab-id}}" class="tab-pane fade in {{active-tab}}">
+					{{/sectionParent}}
+						<div class="row" style="height: 350px;">
+						{{#columns}}
+							<!-- as some need to balance/center these colunms - there 1 empty on the left 2 on the right -->
+							<div class="{{span-size}} {{offset-position}}">	
+							{{#commands}}
+								<a class="btn btn-small {{button-state}} btn-block" href="#{{name}}">{{name}}</a>
+							{{/commands}}
+							</div>
+						{{/columns}}
+						</div>
+					{{#sectionParentClose}}
+					</div>
+					{{/sectionParentClose}}
+				{{/tabContent}}
+				</div><!--/tab-content-->
+			</div>
+
+<!-- sysinfo details start here -->
+
+<hr>
+
+{{#tabContent}}
+{{#columns}}
+{{#commands}}
+<a name="{{name}}"></a>
+<h2>{{name}}</h2>
+<pre>
+{{output}}
+</pre>
+<div class="row">
+	<div class="span2 pull-right">
+		<a class="btn btn-mini btn-inverse" href="#index">back to index</a>
+	</div>
+</div>
+{{/commands}}
+{{/columns}}
+{{/tabContent}}
+
+
+		<div class="footer">
+			<p>&copy; Mellanox Technologies 2013</p>
+
+			<ul class="footer-links">
+				<li><a href="#myModal" data-toggle="modal">About</a></li>
+				<li class="muted">&middot;</li>
+				<li><a href="#">Contact</a></li>
+				<li class="muted">&middot;</li>
+				<li><a href="http://support.mellanox.com/SupportWeb">Support Web</a></li>
+			</ul>
+
+			<div class="bs-docs-social">
+				<div class="container">
+					<ul class="bs-docs-social-buttons">
+						<li>
+							<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mellanoxsupport&repo=sysinfo-snapshot&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+						</li>
+						<li>
+							<iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=mellanoxsupport&repo=sysinfo-snapshot&type=fork&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="102px" height="20px"></iframe>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+		
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<h3 id="myModalLabel">About SysInfoSnapshot</h3>
+			</div>
+			<div class="modal-body">
+				<p>Version: 2.01.1</p>
+				<p>Credits:</p>
+				<p>Python Coding: Luis De Siqueira</p>
+				<p>HTML Interface: Ryan Heath</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+    </div> <!-- /container -->
+   
+ 
+
+    <!-- javascript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../../assets/js/jquery-1.9.1.js"></script>
+    <script src="../../assets/js/bootstrap.js"></script>
+
+
+  </body>
+</html>
+
