@@ -1,4 +1,14 @@
 {
+  'navLinksLeft':
+  [
+    {'links':
+    [
+      {'link': './host-info.html', 'title': 'Host Info',},
+      {'link': './fabric-info.html', 'title': 'Fabric Info',},
+    ],
+    },
+  ],
+
 	'navTabs':
 	[
 		{'navTab-id': 'tab'
@@ -16,24 +26,12 @@
 							{'listItemClass': '', 'tabSection-id': 'systemInfo-proc', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': '/proc',},
 							{'listItemClass': '', 'tabSection-id': 'systemInfo-sys', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': '/sys',},
 							{'listItemClass': 'divider', 'tabSection-id': '', 'data-toggle': '', 'tabSection-title': '',},
-							{'listItemClass': '', 'tabSection-id': 'systemInfo-all', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'General',},
+							{'listItemClass': '', 'tabSection-id': 'systemInfoAll', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'All',},
 						],
 						},
 					],
 				},
 				{'isnotdrop': [ {'listItemClass': '', 'tabSection-id': 'networkInfo', 'tabSection-title': 'Network',}, ], },
-				{'isdrop': [ 
-						{'dropdownTitle': 'Product Specific'
-						,'listItems': 
-						[
-							{'listItemClass': '', 'tabSection-id': './ufm-info.html', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'UFM',},
-							{'listItemClass': '', 'tabSection-id': './vsa-info.html', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'VSA',},
-							{'listItemClass': '', 'tabSection-id': './vma-info.html', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'VMA',},
-							{'listItemClass': '', 'tabSection-id': './fca-info.html', 'data-toggle': 'data-toggle="tab"', 'tabSection-title': 'FCA',},
-						],
-						},
-					],
-				},
 			],
 		},
 	],
@@ -281,7 +279,7 @@
 			]
 		},
 		{'sectionParent': [{'boolean': 'true',},]
-		,'tab-id': 'systemInfoAll-general'
+		,'tab-id': 'systemInfoAll'
 		,'sectionParentClose': []
 		, 
 			'columns':

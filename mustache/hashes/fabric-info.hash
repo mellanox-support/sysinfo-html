@@ -1,6 +1,172 @@
 {
+  'navLinksLeft':
+  [
+    {'links':
+    [
+      {'link': './host-info.html', 'title': 'Host Info',},
+      {'link': './fabric-info.html', 'title': 'Fabric Info',},
+    ],
+    },
+  ],
 
-
-
-
+	'navTabs':
+	[
+		{'navTab-id': 'tab'
+		,'navTabClassParams': [ 'nav', 'nav-tabs', ]
+		,
+			'navTab-listItems':	
+			[
+				{'isnotdrop': [ {'listItemClass': 'active', 'tabSection-id': 'fabricInfo-general', 'tabSection-title': 'General',}, ], },
+				{'isnotdrop': [ {'listItemClass': '', 'tabSection-id': 'fabricInfo-sm', 'tabSection-title': 'Subnet Manager',}, ], },
+				{'isnotdrop': [ {'listItemClass': '', 'tabSection-id': 'fabricInfo-diag', 'tabSection-title': 'Diagonosics',}, ], },
+			],
+		},
+	],
+	
+	'tabContent':
+	[
+		{'sectionParent': [{'boolean': 'true',},]
+		,'tab-id': 'fabricInfo-general'
+		,'active-tab': 'active'
+		,'sectionParentClose': [{'boolean': 'true',},]
+		,
+			'columns':
+			 [ 
+				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1a1', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+				{'column-id': '2', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				},
+				{'column-id': '3', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+			]
+		},
+		{'sectionParent': [{'boolean': 'true',},]
+		,'tab-id': 'fabricInfo-sm'
+		,'sectionParentClose': [{'boolean': 'true',},]
+		,
+			'columns':
+			 [ 
+				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1a2', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+				{'column-id': '2', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				},
+				{'column-id': '3', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+			]
+		},
+		{'sectionParent': [{'boolean': 'true',},]
+		,'tab-id': 'fabricInfo-diag'
+		,'sectionParentClose': [{'boolean': 'true',},]
+		, 
+			'columns':
+			 [ 
+				{'column-id': '1', 'span-size': 'span3', 'offset-position': 'offset1', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1a3', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8a', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+				{'column-id': '2', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8b', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				},
+				{'column-id': '3', 'span-size': 'span3', 'offset-position': '', 
+					'commands': 
+					[ 
+						{'button-state': 'btn-success', 'name': 'command1c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command2c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command3c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command4c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command5c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command6c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command7c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+						{'button-state': 'btn-success', 'name': 'command8c', 'output': '''xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx''', },
+					] 
+				}, 
+			]
+		},
+	],
 }
+

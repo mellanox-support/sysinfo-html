@@ -1,6 +1,24 @@
 {
+  'navLinksLeft':
+  [
+    {'links':
+    [
+      {'link': './host-info.html', 'title': 'Host Info',},
+      {'link': './fabric-info.html', 'title': 'Fabric Info',},
+    ],
+    },
+  ],
 
 
-
+  'summary':
+  [
+    {'title': 'OS Release', 'detail': 'CentOS release 6.3 (Final)',},
+    {'title': 'Kernel', 'detail': '2.6.32-279.el6.x86_64',},
+    {'title': 'Hostname', 'detail': 'zahn1',},
+    {'title': 'Address', 'detail': '10.252.64.29',},
+    {'title': 'CPU', 'detail': 'Intel(R) Xeon(R) CPU E5405  @ 2.00GHz',},
+    {'title': 'Memory', 'detail': '3922048 kB',},
+    {'title': 'OFED', 'detail': 'MLNX_OFED_LINUX-1.5.3-3.1.0 (OFED-1.5.3-3.1.0)',},
+  ],
 
 }
